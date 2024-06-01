@@ -20,4 +20,4 @@ export const icons = {
   weatherGif: weatherGif,
   search: search,
   location: location,
-}
+};
