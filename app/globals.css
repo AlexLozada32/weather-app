@@ -62,7 +62,7 @@
       "city city"
       "weather temperature"
       "humidity w-speed";
-    column-gap: 1rem;
+    column-gap: 2rem;
     row-gap: 1.5rem;
   }
 

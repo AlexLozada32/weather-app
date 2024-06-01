@@ -13,6 +13,7 @@ const config: Config = {
         skyBlue: "#1D4FD8",
         deepRoyalBlue: "#1E3A8A",
         honeyGold: "#F4B942",
+        darkSlateGray: "#2F4F4F"
       },
       backgroundImage: {
         "gradient-blue": "url('../public/svg/background.svg')",

@@ -34,7 +34,7 @@ const WeatherDisplay = ({ weatherData }: WeatherDisplayProps) => {
     return (
       <section className="md:grid-template">
         <div className="city-template mb-4 flex items-center justify-center">
-          <Image src={icons.location} alt="location" className="mr-2 h-5 w-5" />
+          <Image src={icons.location} alt="location" className="mr-2 h-5 w-5 md:h-6 md:w-6 lg:h-8 lg:w-8" />
           <h2 className="-skew-x-6 text-xl">--, --</h2>
         </div>
         <div className="weather-template mb-4 flex flex-col items-center justify-center">
@@ -42,7 +42,7 @@ const WeatherDisplay = ({ weatherData }: WeatherDisplayProps) => {
             <p className="mr-2 text-xl font-light text-neutral-500">Weather</p>
             <Image src={icons.weather} alt="weather" className="h-4 w-4" />
           </div>
-          <p>--</p>
+          <p className="text-darkSlateGray">--</p>
         </div>
         <div className="temperature-template mb-4 flex flex-col items-center justify-center">
           <div className="flex items-center justify-center">
@@ -55,14 +55,14 @@ const WeatherDisplay = ({ weatherData }: WeatherDisplayProps) => {
               className="h-4 w-4"
             />
           </div>
-          <p>-- °F</p>
+          <p className="text-darkSlateGray">-- °F</p>
         </div>
         <div className="humidity-template mb-4 flex flex-col items-center justify-center">
           <div className="flex items-center justify-center">
             <p className="mr-2 text-xl font-light text-neutral-500">Humidity</p>
             <Image src={icons.humidity} alt="humidity" className="h-4 w-4" />
           </div>
-          <p>--%</p>
+          <p className="text-darkSlateGray">--%</p>
         </div>
         <div className="w-speed-template mb-4 flex flex-col items-center justify-center">
           <div className="flex items-center justify-center">
@@ -72,7 +72,7 @@ const WeatherDisplay = ({ weatherData }: WeatherDisplayProps) => {
             <Image src={icons.wind} alt="wind" className="h-4 w-4" />
           </div>
           <div>
-            <p>-- mph</p>
+            <p className="text-darkSlateGray">-- mph</p>
           </div>
         </div>
       </section>
@@ -81,9 +81,9 @@ const WeatherDisplay = ({ weatherData }: WeatherDisplayProps) => {
 
   return (
     <section className="md:grid-template">
-      <div className="city-template mb-4 flex items-center justify-center">
-        <Image src={icons.location} alt="location" className="mr-2 h-5 w-5" />
-        <h2 className="city-text-shadow text-2xl font-bold text-honeyGold sm:text-3xl">
+      <div className="city-template mb-4 flex items-center justify-center md:mb-0">
+        <Image src={icons.location} alt="location" className="mr-2 h-5 w-5 md:h-6 md:w-6 lg:h-8 lg:w-8" />
+        <h2 className="city-text-shadow text-2xl font-bold text-honeyGold sm:text-3xl md:text-4xl">
           {weatherData.name}, {weatherData.sys.country}
         </h2>
       </div>
@@ -92,7 +92,7 @@ const WeatherDisplay = ({ weatherData }: WeatherDisplayProps) => {
           <p className="mr-2 text-xl font-light text-neutral-500">Weather</p>
           <Image src={icons.weather} alt="weather" className="h-4 w-4" />
         </div>
-        <p>{weatherData.weather[0].description}</p>
+        <p className="text-darkSlateGray">{weatherData.weather[0].description}</p>
       </div>
       <div className="temperature-template mb-4 flex flex-col items-center justify-center">
         <div className="flex items-center justify-center">
@@ -106,7 +106,7 @@ const WeatherDisplay = ({ weatherData }: WeatherDisplayProps) => {
           />
         </div>
         <div className="flex">
-          <p className="mr-2">
+          <p className="mr-2 text-darkSlateGray">
             {degree === "°F"
               ? toFahrenheit(weatherData.main.temp)
               : degree === "°C"
@@ -122,7 +122,7 @@ const WeatherDisplay = ({ weatherData }: WeatherDisplayProps) => {
           <p className="mr-2 text-xl font-light text-neutral-500">Humidity</p>
           <Image src={icons.humidity} alt="humidity" className="h-4 w-4" />
         </div>
-        <p>{weatherData.main.humidity}%</p>
+        <p className="text-darkSlateGray">{weatherData.main.humidity}%</p>
       </div>
       <div className="w-speed-template mb-4 flex flex-col items-center justify-center">
         <div className="flex items-center justify-center">
@@ -130,7 +130,7 @@ const WeatherDisplay = ({ weatherData }: WeatherDisplayProps) => {
           <Image src={icons.wind} alt="wind" className="h-4 w-4" />
         </div>
         <div className="flex">
-          <p className="mr-2">
+          <p className="mr-2 text-darkSlateGray">
             {speed === "mph"
               ? msToMph(weatherData.wind.speed)
               : speed === "km/h"

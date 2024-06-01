@@ -59,7 +59,7 @@ const Main = () => {
             height={65}
           />
         </div>
-        <p className="mb-4 text-center">
+        <p className="mb-4 text-center text-darkSlateGray">
           Enter a location to get the current weather
         </p>
         <div className="relative mb-4 flex items-center">
