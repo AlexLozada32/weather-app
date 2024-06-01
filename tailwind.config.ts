@@ -8,10 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        boneWhite: "#F0EDE5",
+        skyBlue: "#1D4FD8",
+        deepRoyalBlue: "#1E3A8A",
+        honeyGold: "#F4B942",
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-blue": "url('../public/svg/background.svg')",
       },
     },
   },
